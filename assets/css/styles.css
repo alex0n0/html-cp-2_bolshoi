@@ -1,0 +1,513 @@
+.bold-1 {
+  font-weight: 100;
+}
+
+.bold-2 {
+  font-weight: 200;
+}
+
+.bold-3 {
+  font-weight: 300;
+}
+
+.bold-4 {
+  font-weight: 400;
+}
+
+.bold-5 {
+  font-weight: 500;
+}
+
+.bold-6 {
+  font-weight: 600;
+}
+
+.bold-7 {
+  font-weight: 700;
+}
+
+.bold-8 {
+  font-weight: 800;
+}
+
+.bold-9 {
+  font-weight: 900;
+}
+
+.bold-10 {
+  font-weight: 1000;
+}
+
+.font-heading {
+  font-family: "Playfair Display", serif;
+}
+
+.font-secondary {
+  font-family: "Cutive Mono", monospace;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-0 {
+  text-decoration: none !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.link-1 {
+  color: inherit;
+}
+
+.link-1:hover {
+  color: inherit;
+}
+
+.link-1.active {
+  text-decoration: underline !important;
+}
+
+.aspect-71 {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.aspect-71 .spacer {
+  padding-bottom: 71%;
+}
+
+.aspect-100 {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.aspect-100 .spacer {
+  padding-bottom: 100%;
+}
+
+.mt-60 {
+  margin-top: 60px !important;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+}
+
+header .brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+}
+
+header .buyTicketsButton {
+  border-radius: 0px;
+  border: 1px solid white;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+header .buyTicketsButton:hover {
+  background-color: white;
+  color: black !important;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sidemenu {
+  position: fixed;
+  z-index: 2001;
+  top: 0;
+  left: -250px;
+  height: 100vh;
+  width: 250px;
+  opacity: 0;
+  overflow-y: auto;
+  background-color: white;
+  color: black;
+  -webkit-transition: opacity 0.2s, left 0.2s;
+  transition: opacity 0.2s, left 0.2s;
+}
+
+.sidemenu.open {
+  opacity: 1;
+  left: 0;
+}
+
+.searchbar {
+  position: fixed;
+  z-index: 2001;
+  top: -109px;
+  left: 0;
+  height: 109px;
+  width: 100vw;
+  opacity: 0;
+  background-color: white;
+  color: black;
+  -webkit-transition: opacity 0.2s, top 0.2s;
+  transition: opacity 0.2s, top 0.2s;
+}
+
+.searchbar.open {
+  opacity: 1;
+  top: 0;
+}
+
+.searchbar .container {
+  height: 100%;
+}
+
+.searchbar form {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.searchbar input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: none;
+  text-align: center;
+  font-size: 2rem;
+  outline: 0;
+}
+
+.searchbar input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.searchbar input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.searchbar input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.searchbar input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.searchbar button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100px;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+}
+
+.searchbar button .material-icons {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s color;
+  transition: 0.3s color;
+}
+
+.searchbar button:hover {
+  cursor: pointer;
+}
+
+.searchbar button:hover .material-icons {
+  color: black;
+}
+
+.page {
+  height: 100vh;
+}
+
+.page.page-1 {
+  height: auto !important;
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.2))), url("../images/don_quixote.png");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("../images/don_quixote.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.page.page-1.active {
+  opacity: 1;
+}
+
+.page.page-1 .details {
+  margin-top: 150px;
+}
+
+.page.page-1 .details a {
+  max-width: 200px;
+  font-size: 1.1rem;
+}
+
+.page.page-1 .footer {
+  margin-top: 175px !important;
+}
+
+.page.page-1 h1,
+.page.page-1 .h1 {
+  font-size: 70px;
+  line-height: 65px;
+}
+
+@media (min-width: 992px) {
+  .page.page-1 h1,
+  .page.page-1 .h1 {
+    font-size: 120px;
+    line-height: 110px;
+  }
+}
+
+.page.page-1 .sliderIndicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.page.page-1 .sliderIndicator .indicatorText {
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.page.page-1 .sliderIndicator .indicatorText .current {
+  font-size: 1.1rem;
+}
+
+.page.page-1 .sliderIndicator .indicatorText .total {
+  font-size: 0.9rem;
+}
+
+.page.page-1 .sliderIndicator .indicatorText .text-muted {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.page.page-1 .sliderIndicator .indicator {
+  height: 4px;
+  width: 100%;
+  min-width: 150px;
+  max-width: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page.page-1 .sliderIndicator .indicator .inner {
+  height: 100%;
+  width: 33%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.page.page-2 {
+  height: auto !important;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.page.page-2.active {
+  opacity: 1;
+}
+
+.page.page-2 .nav .h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.page.page-2 .nav a.link-1 {
+  text-decoration: underline;
+}
+
+.page.page-2 .nav a.link-1.active {
+  text-decoration: none !important;
+}
+
+.page.page-2 .nav a.link-1:hover {
+  text-decoration: none !important;
+}
+
+.page.page-2 .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "left1" "right1" "left2" "right2";
+}
+
+@media (min-width: 768px) {
+  .page.page-2 .content {
+    -ms-grid-columns: 1fr 1.8fr;
+        grid-template-columns: 1fr 1.8fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "left1 right1" "left2 right2";
+    grid-column-gap: 120px;
+  }
+}
+
+.page.page-2 .content h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.page.page-2 .content .left1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left1;
+}
+
+.page.page-2 .content .right1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: right1;
+}
+
+.page.page-2 .content .left2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: left2;
+}
+
+.page.page-2 .content .right2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: right2;
+}
+
+.page.page-2 .content .right__content {
+  margin-left: auto;
+  max-width: auto;
+}
+
+@media (min-width: 768px) {
+  .page.page-2 .content .right__content {
+    max-width: 650px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .page.page-2 .content .right__content {
+    max-width: 900px;
+  }
+}
+
+.page.page-2 .content .aspect-100 {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.page.page-2 .content .aspect-100 .spacer {
+  padding-bottom: 71%;
+}
+
+@media (min-width: 768px) {
+  .page.page-2 .content .aspect-100 .spacer {
+    padding-bottom: 100%;
+  }
+}
+
+.page-3 {
+  position: relative;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.page-3.active {
+  opacity: 1;
+}
+
+.page-3 .background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 150px);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.2))), url("../images/boris_godunov.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url("../images/boris_godunov.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: top;
+}
+
+.page-3 .content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-3 .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.page-3 .title {
+  padding-top: 3rem;
+}
+
+.page-3 .title h2 {
+  font-size: 5rem;
+}
+
+.page-3 .description {
+  max-width: 500px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.page-3 .description .text-accent {
+  color: #b90000;
+}
+
+.page-3 .details {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.page-3 .details a {
+  font-size: 2rem;
+}
+/*# sourceMappingURL=styles.css.map */

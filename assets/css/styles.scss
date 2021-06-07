@@ -1,0 +1,475 @@
+// font-family: 'Playfair Display', serif;
+// font-family: 'Cutive Mono', monospace;
+
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$break-xxl: 1800px;
+
+@mixin break-sm {
+  @media (min-width: #{$break-sm}) {
+    @content;
+  }
+}
+@mixin break-md {
+  @media (min-width: #{$break-md}) {
+    @content;
+  }
+}
+@mixin break-lg {
+  @media (min-width: #{$break-lg}) {
+    @content;
+  }
+}
+@mixin break-xl {
+  @media (min-width: #{$break-xl}) {
+    @content;
+  }
+}
+@mixin break-xxl {
+  @media (min-width: #{$break-xxl}) {
+    @content;
+  }
+}
+
+.bold-1 {
+  font-weight: 100;
+}
+.bold-2 {
+  font-weight: 200;
+}
+.bold-3 {
+  font-weight: 300;
+}
+.bold-4 {
+  font-weight: 400;
+}
+.bold-5 {
+  font-weight: 500;
+}
+.bold-6 {
+  font-weight: 600;
+}
+.bold-7 {
+  font-weight: 700;
+}
+.bold-8 {
+  font-weight: 800;
+}
+.bold-9 {
+  font-weight: 900;
+}
+.bold-10 {
+  font-weight: 1000;
+}
+.font-heading {
+  font-family: "Playfair Display", serif;
+}
+// .font-primary {
+//   font-family: 'Playfair Display', serif;
+// }
+.font-secondary {
+  font-family: "Cutive Mono", monospace;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline-0 {
+  text-decoration: none !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.link-1 {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+
+  &.active {
+    text-decoration: underline !important;
+  }
+}
+
+.aspect-71 {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+
+  .spacer {
+    padding-bottom: 71%;
+  }
+}
+
+.aspect-100 {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+
+  .spacer {
+    padding-bottom: 100%;
+  }
+}
+
+.mt-60 {
+  margin-top: 60px !important;
+}
+
+body {
+  background-color: black;
+  color: white;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+header {
+  position: relative;
+  .brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+  }
+  .buyTicketsButton {
+    border-radius: 0px;
+    border: 1px solid white;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    &:hover {
+      background-color: white;
+      color: black !important;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sidemenu {
+  position: fixed;
+  z-index: 2001;
+  top: 0;
+  left: -250px;
+  height: 100vh;
+  width: 250px;
+  opacity: 0;
+  overflow-y: auto;
+  background-color: white;
+  color: black;
+  transition: opacity 0.2s, left 0.2s;
+
+  &.open {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.searchbar {
+  position: fixed;
+  z-index: 2001;
+  top: -109px;
+  left: 0;
+  height: 109px;
+  width: 100vw;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  transition: opacity 0.2s, top 0.2s;
+
+  &.open {
+    opacity: 1;
+    top: 0;
+  }
+  .container {
+    height: 100%;
+  }
+  form {
+    height: 100%;
+    display: flex;
+  }
+
+  input {
+    flex: 1 1 auto;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+    outline: 0;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  button {
+    flex: 0 0 auto;
+    width: 100px;
+    border: none;
+    background-color: transparent;
+    outline: 0;
+
+    .material-icons {
+      font-size: 2.5rem;
+      color: rgba(0, 0, 0, 0.5);
+      transition: 0.3s color;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .material-icons {
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+  }
+}
+
+.page {
+  height: 100vh;
+}
+
+.page.page-1 {
+  height: auto !important;
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
+    url("../images/don_quixote.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+
+  &.active {
+    opacity: 1;
+  }
+
+  .details {
+    margin-top: 150px;
+    a {
+      max-width: 200px;
+      font-size: 1.1rem;
+    }
+  }
+
+  .footer {
+    margin-top: 175px !important;
+  }
+
+  h1,
+  .h1 {
+    font-size: 70px;
+    line-height: 65px;
+
+    @include break-lg {
+      font-size: 120px;
+      line-height: 110px;
+    }
+  }
+
+  .sliderIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .indicatorText {
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+      .current {
+        font-size: 1.1rem;
+      }
+      .total {
+        font-size: 0.9rem;
+      }
+      .text-muted {
+        color: rgba(255, 255, 255, 0.5) !important;
+      }
+    }
+
+    .indicator {
+      height: 4px;
+      width: 100%;
+      min-width: 150px;
+      max-width: 200px;
+      background-color: rgba(255, 255, 255, 0.1);
+      .inner {
+        height: 100%;
+        width: 33%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+.page.page-2 {
+  height: auto !important;
+  min-height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+
+  &.active {
+    opacity: 1;
+  }
+
+  .nav {
+    .h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    a.link-1 {
+      text-decoration: underline;
+
+      &.active {
+        text-decoration: none !important;
+      }
+
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left1"
+      "right1"
+      "left2"
+      "right2";
+
+    @include break-md {
+      grid-template-columns: 1fr 1.8fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "left1 right1"
+        "left2 right2";
+      grid-column-gap: 120px;
+    }
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+
+    .left1 {
+      grid-area: left1;
+    }
+
+    .right1 {
+      grid-area: right1;
+    }
+
+    .left2 {
+      grid-area: left2;
+    }
+
+    .right2 {
+      grid-area: right2;
+    }
+
+    .right__content {
+      margin-left: auto;
+      max-width: auto;
+
+      @include break-md {
+        max-width: 650px;
+      }
+
+      @include break-xxl {
+        max-width: 900px;
+      }
+    }
+
+    .aspect-100 {
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+
+      .spacer {
+        padding-bottom: 71%;
+        @include break-md {
+          padding-bottom: 100%;
+        }
+      }
+    }
+  }
+}
+
+.page-3 {
+  position: relative;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+
+  &.active {
+    opacity: 1;
+  }
+
+  .background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 150px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+      url("../images/boris_godunov.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .text-muted {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .title {
+    padding-top: 3rem;
+    h2 {
+      font-size: 5rem;
+    }
+  }
+
+  .description {
+    max-width: 500px;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    .text-accent {
+      color: rgb(185, 0, 0);
+    }
+  }
+
+  .details {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    a {
+      font-size: 2rem;
+    }
+  }
+}
